@@ -1,3 +1,4 @@
+<table class="table table-striped">
 <%= form_for(@uzytkownik) do |f| %>
   <% if @uzytkownik.errors.any? %>
     <div id="error_explanation">
@@ -13,25 +14,26 @@
 
   <div class="field">
     <%= f.label :imie %><br>
-    <%= f.text_field :imie %>
+    <%= f.text_field :imie , :class => 'form-control'%>
   </div>
   <div class="field">
     <%= f.label :nazwisko %><br>
-    <%= f.text_field :nazwisko %>
+    <%= f.text_field :nazwisko , :class => 'form-control'%>
   </div>
   <div class="field">
     <%= f.label :login %><br>
-    <%= f.text_field :login %>
+    <%= f.text_field :login , :class => 'form-control'%>
   </div>
   <div class="field">
     <%= f.label :password_digest %><br>
-    <%= f.text_field :password_digest %>
+    <%= f.text_field :password_digest , :class => 'form-control'%>
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email , :class => 'form-control'%>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+  </table>

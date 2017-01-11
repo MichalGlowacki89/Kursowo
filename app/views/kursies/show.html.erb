@@ -1,3 +1,4 @@
+<div class="hero-unit">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -10,5 +11,6 @@
   <%= @kursy.cena_w_zl %>
 </p>
 
-<%= link_to 'Edit', edit_kursy_path(@kursy) %> |
-<%= link_to 'Back', kursies_path %>
+<%= link_to 'Edit', edit_kursy_path(@kursy) , :class => 'btn btn-mini btn-primary'%> |
+<%= link_to 'Back', kursies_path , :class => 'btn btn-mini btn-warning'%>
+</div>

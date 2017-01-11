@@ -1,8 +1,9 @@
-<h1>Listing uzytkowniks</h1>
+<div class="hero-unit">
+<h1>Spis użytkowników</h1>
 
-<table>
+<table class ="table table-striped">
   <thead>
-    <tr>
+    <tr class="info">
       <th>Imie</th>
       <th>Nazwisko</th>
       <th>Login</th>
@@ -20,9 +21,9 @@
         <td><%= uzytkownik.login %></td>
         <td><%= uzytkownik.password_digest %></td>
         <td><%= uzytkownik.email %></td>
-        <td><%= link_to 'Show', uzytkownik %></td>
-        <td><%= link_to 'Edit', edit_uzytkownik_path(uzytkownik) %></td>
-        <td><%= link_to 'Destroy', uzytkownik, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', uzytkownik , :class => 'btn btn-mini btn-default'%></td>
+        <td><%= link_to 'Edit', edit_uzytkownik_path(uzytkownik), :class => 'btn btn-mini btn-primary'%></td>
+        <td><%= link_to 'Destroy', uzytkownik, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,5 +31,6 @@
 
 <br>
 
-<%= link_to 'New Uzytkownik', new_uzytkownik_path %>
+<%= link_to 'New Uzytkownik', new_uzytkownik_path, :class => 'btn btn-mini btn-primary' %>
 <%= link_to("Powrót", {:controller => 'dostep'}, :class => 'btn btn-default')%>
+</div>

@@ -1,5 +1,6 @@
+<div class="hero-unit">
 <p id="notice"><%= notice %></p>
-
+<table class ="table table-striped">
 <p>
   <strong>Imie:</strong>
   <%= @uzytkownik.imie %>
@@ -24,6 +25,12 @@
   <strong>Email:</strong>
   <%= @uzytkownik.email %>
 </p>
+  </table>
 
-<%= link_to 'Edit', edit_uzytkownik_path(@uzytkownik) %> |
-<%= link_to 'Back', uzytkowniks_path %>
+<%= link_to 'Edit', edit_uzytkownik_path(@uzytkownik), :class => 'btn btn-mini btn-primary' %> |
+<%= link_to 'Back', uzytkowniks_path , :class => 'btn btn-mini btn-warning'%>
+
+  
+  
+  
+  </div>

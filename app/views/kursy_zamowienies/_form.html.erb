@@ -1,3 +1,4 @@
+<table class="table table-striped">
 <%= form_for(@kursy_zamowieny) do |f| %>
   <% if @kursy_zamowieny.errors.any? %>
     <div id="error_explanation">
@@ -13,13 +14,14 @@
 
   <div class="field">
     <%= f.label :zamowienie_id %><br>
-    <%= f.number_field :zamowienie_id %>
+    <%= f.number_field :zamowienie_id, :class => 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :kursy_id %><br>
-    <%= f.number_field :kursy_id %>
+    <%= f.number_field :kursy_id , :class => 'form-control'%>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</table>

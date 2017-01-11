@@ -1,7 +1,7 @@
 <div class="hero-unit">
   
 
-<h1>Listing grupas</h1>
+<h1>Spis grup</h1>
 
 <table class ="table table-striped">
   <thead>
@@ -17,9 +17,9 @@
       <tr>
         <td><%= grupa.kurs_id %></td>
         <td><%= grupa.uzytkownik_id %></td>
-        <td><%= link_to 'Show', grupa %></td>
-        <td><%= link_to 'Edit', edit_grupa_path(grupa) %></td>
-        <td><%= link_to 'Destroy', grupa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', grupa , :class => 'btn btn-mini btn-default'%></td>
+        <td><%= link_to 'Edit', edit_grupa_path(grupa) , :class => 'btn btn-mini btn-primary'%></td>
+        <td><%= link_to 'Destroy', grupa, method: :delete, data: { confirm: 'Are you sure?' } , :class => 'btn btn-mini btn-danger'%></td>
       </tr>
     <% end %>
   </tbody>
@@ -27,6 +27,6 @@
 
 <br>
 
-<%= link_to 'New Grupa', new_grupa_path %>
-  <%= link_to("Powrót", {:controller => 'dostep'}, :class => 'btn btn-default')%>
+<%= link_to 'New Grupa', new_grupa_path , :class => 'btn btn-mini btn-primary'%>
+  <%= link_to("Powrót", {:controller => 'dostep'}, :class => 'btn btn-warning')%>
   </div>
