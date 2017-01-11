@@ -1,0 +1,27 @@
+<h1>Listing kursy_zamowienies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Zamowienie</th>
+      <th>Kursy</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kursy_zamowienies.each do |kursy_zamowieny| %>
+      <tr>
+        <td><%= kursy_zamowieny.zamowienie_id %></td>
+        <td><%= kursy_zamowieny.kursy_id %></td>
+        <td><%= link_to 'Show', kursy_zamowieny %></td>
+        <td><%= link_to 'Edit', edit_kursy_zamowieny_path(kursy_zamowieny) %></td>
+        <td><%= link_to 'Destroy', kursy_zamowieny, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kursy zamowienie', new_kursy_zamowieny_path %>

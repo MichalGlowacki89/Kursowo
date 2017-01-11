@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Zamowienie:</strong>
+  <%= @kursy_zamowieny.zamowienie_id %>
+</p>
+
+<p>
+  <strong>Kursy:</strong>
+  <%= @kursy_zamowieny.kursy_id %>
+</p>
+
+<%= link_to 'Edit', edit_kursy_zamowieny_path(@kursy_zamowieny) %> |
+<%= link_to 'Back', kursy_zamowienies_path %>

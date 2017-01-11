@@ -1,0 +1,1 @@
+json.partial! "kursy_zamowienies/kursy_zamowieny", kursy_zamowieny: @kursy_zamowieny

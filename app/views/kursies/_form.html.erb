@@ -1,0 +1,25 @@
+<%= form_for(@kursy) do |f| %>
+  <% if @kursy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kursy.errors.count, "error") %> prohibited this kursy from being saved:</h2>
+
+      <ul>
+      <% @kursy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nazwa %><br>
+    <%= f.text_field :nazwa %>
+  </div>
+  <div class="field">
+    <%= f.label :cena_w_zl %><br>
+    <%= f.number_field :cena_w_zl %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

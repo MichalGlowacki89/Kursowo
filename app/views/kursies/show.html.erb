@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nazwa:</strong>
+  <%= @kursy.nazwa %>
+</p>
+
+<p>
+  <strong>Cena w zl:</strong>
+  <%= @kursy.cena_w_zl %>
+</p>
+
+<%= link_to 'Edit', edit_kursy_path(@kursy) %> |
+<%= link_to 'Back', kursies_path %>

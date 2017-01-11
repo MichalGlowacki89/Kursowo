@@ -1,0 +1,32 @@
+<div class="hero-unit">
+  
+
+<h1>Listing kursies</h1>
+
+<table class ="table table-striped">
+  <thead>
+    <tr class="info">
+      <th>Nazwa</th>
+      <th>Cena w zl</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kursies.each do |kursy| %>
+      <tr>
+        <td><%= kursy.nazwa %></td>
+        <td><%= kursy.cena_w_zl %></td>
+        <td><%= link_to 'Show', kursy, :class => 'btn btn-mini btn-default' %></td>
+        <td><%= link_to 'Edit', edit_kursy_path(kursy), :class => 'btn btn-mini btn-primary' %></td>
+        <td><%= link_to 'Destroy', kursy, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini btn-danger' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kursy', new_kursy_path %>
+  <%= link_to("Powrót", {:controller => 'dostep'}, :class => 'btn btn-default')%>
+  </div>

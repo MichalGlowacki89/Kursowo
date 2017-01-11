@@ -1,0 +1,1 @@
+json.partial! "kursies/kursy", kursy: @kursy

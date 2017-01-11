@@ -1,0 +1,1 @@
+json.array! @kursy_zamowienies, partial: 'kursy_zamowienies/kursy_zamowieny', as: :kursy_zamowieny

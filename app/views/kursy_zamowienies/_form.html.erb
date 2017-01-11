@@ -1,0 +1,25 @@
+<%= form_for(@kursy_zamowieny) do |f| %>
+  <% if @kursy_zamowieny.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kursy_zamowieny.errors.count, "error") %> prohibited this kursy_zamowieny from being saved:</h2>
+
+      <ul>
+      <% @kursy_zamowieny.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :zamowienie_id %><br>
+    <%= f.number_field :zamowienie_id %>
+  </div>
+  <div class="field">
+    <%= f.label :kursy_id %><br>
+    <%= f.number_field :kursy_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

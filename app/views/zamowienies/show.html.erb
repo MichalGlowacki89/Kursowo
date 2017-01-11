@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uzytkownik:</strong>
+  <%= @zamowieny.uzytkownik_id %>
+</p>
+
+<p>
+  <strong>Wartosc w zl:</strong>
+  <%= @zamowieny.wartosc_w_zl %>
+</p>
+
+<%= link_to 'Edit', edit_zamowieny_path(@zamowieny) %> |
+<%= link_to 'Back', zamowienies_path %>

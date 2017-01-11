@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+
+  root "dostep#index"
+  get 'admin' ,:to=>"dostep#index"
+
+
+  resources :grupas
+
+  resources :kursies
+
+  resources :kursy_zamowienies
+
+  resources :zamowienies
+
+  resources :uzytkowniks
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,25 @@
+<%= form_for(@zamowieny) do |f| %>
+  <% if @zamowieny.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@zamowieny.errors.count, "error") %> prohibited this zamowieny from being saved:</h2>
+
+      <ul>
+      <% @zamowieny.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :uzytkownik_id %><br>
+    <%= f.text_field :uzytkownik_id %>
+  </div>
+  <div class="field">
+    <%= f.label :wartosc_w_zl %><br>
+    <%= f.number_field :wartosc_w_zl %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
